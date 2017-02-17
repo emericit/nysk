@@ -18,6 +18,7 @@ import org.apache.spark.mllib.linalg._
 import org.apache.spark.mllib.linalg.distributed.RowMatrix
 import breeze.linalg.{DenseMatrix => BDenseMatrix, DenseVector => BDenseVector, SparseVector => BSparseVector, Vector => BVector}
 import org.apache.spark.mllib.feature.{Word2Vec, Word2VecModel}
+import org.apache.spark.mllib.feature.StandardScaler
 
 import java.io.StringReader
 import edu.stanford.nlp.ling.CoreLabel;
@@ -29,12 +30,13 @@ import edu.stanford.nlp.process.PTBTokenizer;
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
 
-def toBreeze(v:Vector) = BVector(v.toArray)
-def fromBreeze(bv:BVector[Double]) = Vectors.dense(bv.toArray)
-def add(v1:Vector, v2:Vector) = fromBreeze(toBreeze(v1) + toBreeze(v2))
-def scalarMultiply(a:Double, v:Vector) = fromBreeze(a * toBreeze(v))
-
 object NYSK {
+
+  def toBreeze(v:Vector) = BVector(v.toArray)
+  def fromBreeze(bv:BVector[Double]) = Vectors.dense(bv.toArray)
+  def add(v1:Vector, v2:Vector) = fromBreeze(toBreeze(v1) + toBreeze(v2))
+  def scalarMultiply(a:Double, v:Vector) = fromBreeze(a * toBreeze(v))
+
   // Séparation du fichier XML en un RDD où chaque élément est un article
   // Retourne un RDD de String à partir du fichier "path"
   def loadArticle(sc: SparkContext, path: String): RDD[String] = {
@@ -65,15 +67,22 @@ object NYSK {
 
   // Pour un élément XML de type "document",
   //   - on extrait le champ #field
-  def extract(elem: scala.xml.Elem, field: String): String = {
+  def extractString(elem: scala.xml.Elem, field: String): String = {
     val dn: scala.xml.NodeSeq = elem \\ field
     val x: String = dn.text
     return x
   }
 
-  def extractAll(elem: scala.xml.Elem): (Int, java.sql.Timestamp, String) = {
-    return (extract(elem,"docid"), extractDate(elem), extract(elem,"text"))
+  def extractInt(elem: scala.xml.Elem, field: String): Int = {
+    val dn: scala.xml.NodeSeq = elem \\ field
+    val x: Int = dn.text.toInt
+    return x
   }
+
+  def extractAll(elem: scala.xml.Elem): (Int, java.sql.Timestamp, String) = {
+    return (extractInt(elem,"docid"), extractDate(elem), extractString(elem,"text"))
+  }
+
 
   // Nécessaire, car le type java.sql.Timestamp n'est pas ordonné par défaut (étonnant...)
   implicit def ordered: Ordering[java.sql.Timestamp] = new Ordering[java.sql.Timestamp] {
@@ -82,6 +91,9 @@ object NYSK {
 
   def main(args: Array[String]) {
     val conf = new SparkConf().setAppName("NYSK")
+    conf.set("spark.hadoop.validateOutputSpecs", "false")
+    val hadoopConf = new org.apache.hadoop.conf.Configuration()
+    val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://localhost:9000"), hadoopConf)
     val sc = new SparkContext(conf)
     val nysk_raw = loadArticle(sc, "/user/emeric/nysk.xml")
     val nysk_xml: RDD[Elem] = nysk_raw.map(XML.loadString)
@@ -127,8 +139,30 @@ object NYSK {
       (docid, vSum)
     })/*.filter(vec => Vectors.norm(vec, 1.0) > 0.0)*/.persist()
 
+    val matRDD = w2vecRepr.map{v => v._2}.cache()
+    val mat = new RowMatrix(matRDD)
+    val matrixTxt = mat.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
+    // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
+    val outputMatrix = "/user/emeric/matrice.txt"
+    try { hdfs.delete(new org.apache.hadoop.fs.Path(outputMatrix), true) } 
+    catch { case _ : Throwable => { } }
+    matrixTxt.saveAsTextFile(outputMatrix)
 
-    val numTerms = 1000;
+    val centRed = new StandardScaler(withMean = true, withStd = true).fit(matRDD)
+    val matCR: RowMatrix = new RowMatrix(centRed.transform(matRDD))
+    val matCompPrinc = matCR.computePrincipalComponents(10)
+    val projections = matCR.multiply(matCompPrinc)
+    val matSummary = projections.computeColumnSummaryStatistics()
+    val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
+    
+    // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
+    val outputProjection = "/user/emeric/projection.txt"
+    try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
+    catch { case _ : Throwable => { } }
+    projectionsTxt.saveAsTextFile(outputProjection)
+
+
+    /*val numTerms = 1000;
     val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, /*stopwordsBroadcast,*/ numTerms, sc);
     termDocMatrix.cache()
 
@@ -146,7 +180,7 @@ object NYSK {
           println("Concept docs: " + docs.map(_._1).mkString(", "));
           println();
        }
-
+    */
     sc.stop()
   }
 }

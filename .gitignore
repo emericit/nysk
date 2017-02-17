@@ -1,3 +1,4 @@
 *.log
 metastore_db/*
 *.jar
+*.class

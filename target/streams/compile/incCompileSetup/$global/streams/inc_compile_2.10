@@ -19,27 +19,35 @@ name hashing:
 1 items
 0 -> true
 products:
-12 items
+19 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anon$1.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$1.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$2.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3$$anonfun$apply$1.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$4.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5$$anonfun$apply$2.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6$$anonfun$apply$3$$anonfun$apply$4.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6$$anonfun$apply$3.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8$$anonfun$apply$5.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9$$anonfun$apply$6.class
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$loadArticle$1.class
-/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$1.class
-/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$2$$anonfun$apply$2.class
-/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$2$$anonfun$apply$3.class
-/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$2.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK$.class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/target/scala-2.10/classes/NYSK.class
 binary dependencies:
-8 items
+9 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/lib/common.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/lib/lsa.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar
 direct source dependencies:
@@ -59,7 +67,7 @@ inheritance internal dependencies:
 inheritance external dependencies:
 0 items
 class names:
-12 items
+19 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anon$1
@@ -67,19 +75,29 @@ class names:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$2
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$3
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$3$$anonfun$apply$1
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$4
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$5
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$5$$anonfun$apply$2
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$6
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$6$$anonfun$apply$3
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$6$$anonfun$apply$3$$anonfun$apply$4
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$7
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$8
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$8$$anonfun$apply$5
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$9
+/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$9$$anonfun$apply$6
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$loadArticle$1
-/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$main$1
-/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$main$2
-/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$main$2$$anonfun$apply$2
-/home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK$$anonfun$main$2$$anonfun$apply$3
 used names:
-191 items
+245 items
+/home/emeric/nysk/src/main/scala/NYSK.scala -> !=
 /home/emeric/nysk/src/main/scala/NYSK.scala -> $anon
+/home/emeric/nysk/src/main/scala/NYSK.scala -> &
+/home/emeric/nysk/src/main/scala/NYSK.scala -> *
 /home/emeric/nysk/src/main/scala/NYSK.scala -> +
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /
 /home/emeric/nysk/src/main/scala/NYSK.scala -> <init>
 /home/emeric/nysk/src/main/scala/NYSK.scala -> ==
 /home/emeric/nysk/src/main/scala/NYSK.scala -> A
-/home/emeric/nysk/src/main/scala/NYSK.scala -> A1
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Any
 /home/emeric/nysk/src/main/scala/NYSK.scala -> AnyRef
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Array
@@ -88,9 +106,13 @@ used names:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> BDenseMatrix
 /home/emeric/nysk/src/main/scala/NYSK.scala -> BDenseVector
 /home/emeric/nysk/src/main/scala/NYSK.scala -> BSparseVector
+/home/emeric/nysk/src/main/scala/NYSK.scala -> BVector
+/home/emeric/nysk/src/main/scala/NYSK.scala -> BinaryRegistry
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Boolean
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Broadcast
+/home/emeric/nysk/src/main/scala/NYSK.scala -> C
 /home/emeric/nysk/src/main/scala/NYSK.scala -> CanBuildFrom
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Char
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Class
 /home/emeric/nysk/src/main/scala/NYSK.scala -> ClassTag
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Coll
@@ -104,10 +126,12 @@ used names:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Double
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Elem
 /home/emeric/nysk/src/main/scala/NYSK.scala -> F
-/home/emeric/nysk/src/main/scala/NYSK.scala -> FilterMonadic
+/home/emeric/nysk/src/main/scala/NYSK.scala -> FileSystem
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Float
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Function1
-/home/emeric/nysk/src/main/scala/NYSK.scala -> GenIterable
 /home/emeric/nysk/src/main/scala/NYSK.scala -> HasWord
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Impl2
+/home/emeric/nysk/src/main/scala/NYSK.scala -> InjectNumericOps
 /home/emeric/nysk/src/main/scala/NYSK.scala -> InputFormat
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Int
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Iterator
@@ -117,13 +141,18 @@ used names:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Map
 /home/emeric/nysk/src/main/scala/NYSK.scala -> MatchError
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Matrix
+/home/emeric/nysk/src/main/scala/NYSK.scala -> MultivariateStatisticalSummary
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NYSK
 /home/emeric/nysk/src/main/scala/NYSK.scala -> NodeSeq
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Nothing
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Object
+/home/emeric/nysk/src/main/scala/NYSK.scala -> OpAdd
+/home/emeric/nysk/src/main/scala/NYSK.scala -> OpMulMatrix
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Option
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Ordering
 /home/emeric/nysk/src/main/scala/NYSK.scala -> PTBTokenizer
 /home/emeric/nysk/src/main/scala/NYSK.scala -> ParseWikipedia
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Path
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Predef
 /home/emeric/nysk/src/main/scala/NYSK.scala -> RDD
 /home/emeric/nysk/src/main/scala/NYSK.scala -> RowMatrix
@@ -131,109 +160,146 @@ used names:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Seq
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Set
 /home/emeric/nysk/src/main/scala/NYSK.scala -> SimpleDateFormat
-/home/emeric/nysk/src/main/scala/NYSK.scala -> SingularValueDecomposition
 /home/emeric/nysk/src/main/scala/NYSK.scala -> SparkConf
 /home/emeric/nysk/src/main/scala/NYSK.scala -> SparkContext
 /home/emeric/nysk/src/main/scala/NYSK.scala -> SparseVector
+/home/emeric/nysk/src/main/scala/NYSK.scala -> StandardScaler
+/home/emeric/nysk/src/main/scala/NYSK.scala -> StandardScalerModel
 /home/emeric/nysk/src/main/scala/NYSK.scala -> StanfordCoreNLP
 /home/emeric/nysk/src/main/scala/NYSK.scala -> String
+/home/emeric/nysk/src/main/scala/NYSK.scala -> StringOps
 /home/emeric/nysk/src/main/scala/NYSK.scala -> StringReader
 /home/emeric/nysk/src/main/scala/NYSK.scala -> T
 /home/emeric/nysk/src/main/scala/NYSK.scala -> T1
 /home/emeric/nysk/src/main/scala/NYSK.scala -> T2
 /home/emeric/nysk/src/main/scala/NYSK.scala -> T3
-/home/emeric/nysk/src/main/scala/NYSK.scala -> T4
-/home/emeric/nysk/src/main/scala/NYSK.scala -> T5
+/home/emeric/nysk/src/main/scala/NYSK.scala -> TT
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Text
 /home/emeric/nysk/src/main/scala/NYSK.scala -> That
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Throwable
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Timestamp
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Tuple2
-/home/emeric/nysk/src/main/scala/NYSK.scala -> Tuple4
-/home/emeric/nysk/src/main/scala/NYSK.scala -> Tuple5
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Tuple3
 /home/emeric/nysk/src/main/scala/NYSK.scala -> U
+/home/emeric/nysk/src/main/scala/NYSK.scala -> URI
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Unit
 /home/emeric/nysk/src/main/scala/NYSK.scala -> V
 /home/emeric/nysk/src/main/scala/NYSK.scala -> Vector
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Vectors
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Word2Vec
+/home/emeric/nysk/src/main/scala/NYSK.scala -> Word2VecModel
 /home/emeric/nysk/src/main/scala/NYSK.scala -> XML
 /home/emeric/nysk/src/main/scala/NYSK.scala -> XmlInputFormat
 /home/emeric/nysk/src/main/scala/NYSK.scala -> \\
+/home/emeric/nysk/src/main/scala/NYSK.scala -> _$4
 /home/emeric/nysk/src/main/scala/NYSK.scala -> _$6
 /home/emeric/nysk/src/main/scala/NYSK.scala -> _1
 /home/emeric/nysk/src/main/scala/NYSK.scala -> _2
 /home/emeric/nysk/src/main/scala/NYSK.scala -> _3
-/home/emeric/nysk/src/main/scala/NYSK.scala -> _4
-/home/emeric/nysk/src/main/scala/NYSK.scala -> _5
+/home/emeric/nysk/src/main/scala/NYSK.scala -> a
+/home/emeric/nysk/src/main/scala/NYSK.scala -> add
 /home/emeric/nysk/src/main/scala/NYSK.scala -> apache
 /home/emeric/nysk/src/main/scala/NYSK.scala -> apply
+/home/emeric/nysk/src/main/scala/NYSK.scala -> augmentString
+/home/emeric/nysk/src/main/scala/NYSK.scala -> bVectors
 /home/emeric/nysk/src/main/scala/NYSK.scala -> breeze
 /home/emeric/nysk/src/main/scala/NYSK.scala -> broadcast
+/home/emeric/nysk/src/main/scala/NYSK.scala -> bv
+/home/emeric/nysk/src/main/scala/NYSK.scala -> c
 /home/emeric/nysk/src/main/scala/NYSK.scala -> cache
 /home/emeric/nysk/src/main/scala/NYSK.scala -> canBuildFrom
+/home/emeric/nysk/src/main/scala/NYSK.scala -> centRed
 /home/emeric/nysk/src/main/scala/NYSK.scala -> cloudera
 /home/emeric/nysk/src/main/scala/NYSK.scala -> collect
-/home/emeric/nysk/src/main/scala/NYSK.scala -> collection
 /home/emeric/nysk/src/main/scala/NYSK.scala -> com
 /home/emeric/nysk/src/main/scala/NYSK.scala -> common
 /home/emeric/nysk/src/main/scala/NYSK.scala -> compareTo
-/home/emeric/nysk/src/main/scala/NYSK.scala -> computeSVD
+/home/emeric/nysk/src/main/scala/NYSK.scala -> computeColumnSummaryStatistics
+/home/emeric/nysk/src/main/scala/NYSK.scala -> computePrincipalComponents
 /home/emeric/nysk/src/main/scala/NYSK.scala -> conf
 /home/emeric/nysk/src/main/scala/NYSK.scala -> createNLPPipeline
 /home/emeric/nysk/src/main/scala/NYSK.scala -> d
 /home/emeric/nysk/src/main/scala/NYSK.scala -> datascience
+/home/emeric/nysk/src/main/scala/NYSK.scala -> delete
+/home/emeric/nysk/src/main/scala/NYSK.scala -> dense
 /home/emeric/nysk/src/main/scala/NYSK.scala -> distributed
 /home/emeric/nysk/src/main/scala/NYSK.scala -> dn
-/home/emeric/nysk/src/main/scala/NYSK.scala -> docIds
-/home/emeric/nysk/src/main/scala/NYSK.scala -> docs
+/home/emeric/nysk/src/main/scala/NYSK.scala -> docid
 /home/emeric/nysk/src/main/scala/NYSK.scala -> edu
 /home/emeric/nysk/src/main/scala/NYSK.scala -> elem
 /home/emeric/nysk/src/main/scala/NYSK.scala -> extractAll
 /home/emeric/nysk/src/main/scala/NYSK.scala -> extractDate
-/home/emeric/nysk/src/main/scala/NYSK.scala -> extractSource
-/home/emeric/nysk/src/main/scala/NYSK.scala -> extractSummary
-/home/emeric/nysk/src/main/scala/NYSK.scala -> extractText
-/home/emeric/nysk/src/main/scala/NYSK.scala -> extractTitle
+/home/emeric/nysk/src/main/scala/NYSK.scala -> extractInt
+/home/emeric/nysk/src/main/scala/NYSK.scala -> extractString
+/home/emeric/nysk/src/main/scala/NYSK.scala -> feature
+/home/emeric/nysk/src/main/scala/NYSK.scala -> field
+/home/emeric/nysk/src/main/scala/NYSK.scala -> filter
+/home/emeric/nysk/src/main/scala/NYSK.scala -> fit
+/home/emeric/nysk/src/main/scala/NYSK.scala -> floatArrayOps
 /home/emeric/nysk/src/main/scala/NYSK.scala -> foreach
 /home/emeric/nysk/src/main/scala/NYSK.scala -> format
+/home/emeric/nysk/src/main/scala/NYSK.scala -> fromBreeze
+/home/emeric/nysk/src/main/scala/NYSK.scala -> fs
+/home/emeric/nysk/src/main/scala/NYSK.scala -> get
 /home/emeric/nysk/src/main/scala/NYSK.scala -> getTime
+/home/emeric/nysk/src/main/scala/NYSK.scala -> getVectors
 /home/emeric/nysk/src/main/scala/NYSK.scala -> hadoop
-/home/emeric/nysk/src/main/scala/NYSK.scala -> idfs
+/home/emeric/nysk/src/main/scala/NYSK.scala -> hadoopConf
+/home/emeric/nysk/src/main/scala/NYSK.scala -> hdfs
+/home/emeric/nysk/src/main/scala/NYSK.scala -> identity
+/home/emeric/nysk/src/main/scala/NYSK.scala -> immutable
 /home/emeric/nysk/src/main/scala/NYSK.scala -> in
 /home/emeric/nysk/src/main/scala/NYSK.scala -> io
 /home/emeric/nysk/src/main/scala/NYSK.scala -> iter
 /home/emeric/nysk/src/main/scala/NYSK.scala -> java
-/home/emeric/nysk/src/main/scala/NYSK.scala -> k
+/home/emeric/nysk/src/main/scala/NYSK.scala -> l
+/home/emeric/nysk/src/main/scala/NYSK.scala -> lemmas
 /home/emeric/nysk/src/main/scala/NYSK.scala -> lemmatized
 /home/emeric/nysk/src/main/scala/NYSK.scala -> linalg
 /home/emeric/nysk/src/main/scala/NYSK.scala -> line
 /home/emeric/nysk/src/main/scala/NYSK.scala -> ling
+/home/emeric/nysk/src/main/scala/NYSK.scala -> load
 /home/emeric/nysk/src/main/scala/NYSK.scala -> loadArticle
 /home/emeric/nysk/src/main/scala/NYSK.scala -> loadString
 /home/emeric/nysk/src/main/scala/NYSK.scala -> lsa
 /home/emeric/nysk/src/main/scala/NYSK.scala -> map
 /home/emeric/nysk/src/main/scala/NYSK.scala -> mapPartitions
+/home/emeric/nysk/src/main/scala/NYSK.scala -> mapValues
 /home/emeric/nysk/src/main/scala/NYSK.scala -> mat
+/home/emeric/nysk/src/main/scala/NYSK.scala -> matCR
+/home/emeric/nysk/src/main/scala/NYSK.scala -> matCompPrinc
+/home/emeric/nysk/src/main/scala/NYSK.scala -> matRDD
 /home/emeric/nysk/src/main/scala/NYSK.scala -> materializeClassTag
-/home/emeric/nysk/src/main/scala/NYSK.scala -> mkString
+/home/emeric/nysk/src/main/scala/NYSK.scala -> matrixTxt
 /home/emeric/nysk/src/main/scala/NYSK.scala -> mllib
+/home/emeric/nysk/src/main/scala/NYSK.scala -> multiply
 /home/emeric/nysk/src/main/scala/NYSK.scala -> ne
+/home/emeric/nysk/src/main/scala/NYSK.scala -> net
 /home/emeric/nysk/src/main/scala/NYSK.scala -> newAPIHadoopFile
 /home/emeric/nysk/src/main/scala/NYSK.scala -> nlp
-/home/emeric/nysk/src/main/scala/NYSK.scala -> numTerms
 /home/emeric/nysk/src/main/scala/NYSK.scala -> nysk
 /home/emeric/nysk/src/main/scala/NYSK.scala -> nysk_raw
 /home/emeric/nysk/src/main/scala/NYSK.scala -> nysk_xml
 /home/emeric/nysk/src/main/scala/NYSK.scala -> org
+/home/emeric/nysk/src/main/scala/NYSK.scala -> outputMatrix
+/home/emeric/nysk/src/main/scala/NYSK.scala -> outputProjection
 /home/emeric/nysk/src/main/scala/NYSK.scala -> package
 /home/emeric/nysk/src/main/scala/NYSK.scala -> parse
 /home/emeric/nysk/src/main/scala/NYSK.scala -> path
+/home/emeric/nysk/src/main/scala/NYSK.scala -> persist
 /home/emeric/nysk/src/main/scala/NYSK.scala -> pipeline
 /home/emeric/nysk/src/main/scala/NYSK.scala -> plainTextToLemmas
-/home/emeric/nysk/src/main/scala/NYSK.scala -> println
 /home/emeric/nysk/src/main/scala/NYSK.scala -> process
+/home/emeric/nysk/src/main/scala/NYSK.scala -> projections
+/home/emeric/nysk/src/main/scala/NYSK.scala -> projectionsTxt
 /home/emeric/nysk/src/main/scala/NYSK.scala -> rdd
 /home/emeric/nysk/src/main/scala/NYSK.scala -> refArrayOps
+/home/emeric/nysk/src/main/scala/NYSK.scala -> rows
+/home/emeric/nysk/src/main/scala/NYSK.scala -> s_v_Op_Double_OpMulMatrix
+/home/emeric/nysk/src/main/scala/NYSK.scala -> saveAsTextFile
 /home/emeric/nysk/src/main/scala/NYSK.scala -> sc
 /home/emeric/nysk/src/main/scala/NYSK.scala -> scala
+/home/emeric/nysk/src/main/scala/NYSK.scala -> scalarMultiply
 /home/emeric/nysk/src/main/scala/NYSK.scala -> set
 /home/emeric/nysk/src/main/scala/NYSK.scala -> setAppName
 /home/emeric/nysk/src/main/scala/NYSK.scala -> spark
@@ -242,70 +308,82 @@ used names:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> stop
 /home/emeric/nysk/src/main/scala/NYSK.scala -> stopwords
 /home/emeric/nysk/src/main/scala/NYSK.scala -> stopwordsBroadcast
-/home/emeric/nysk/src/main/scala/NYSK.scala -> svd
 /home/emeric/nysk/src/main/scala/NYSK.scala -> t
-/home/emeric/nysk/src/main/scala/NYSK.scala -> termDocMatrix
-/home/emeric/nysk/src/main/scala/NYSK.scala -> termDocumentMatrix
-/home/emeric/nysk/src/main/scala/NYSK.scala -> termIds
-/home/emeric/nysk/src/main/scala/NYSK.scala -> terms
 /home/emeric/nysk/src/main/scala/NYSK.scala -> text
 /home/emeric/nysk/src/main/scala/NYSK.scala -> textFile
-/home/emeric/nysk/src/main/scala/NYSK.scala -> title
 /home/emeric/nysk/src/main/scala/NYSK.scala -> toArray
+/home/emeric/nysk/src/main/scala/NYSK.scala -> toBreeze
+/home/emeric/nysk/src/main/scala/NYSK.scala -> toDouble
+/home/emeric/nysk/src/main/scala/NYSK.scala -> toInt
 /home/emeric/nysk/src/main/scala/NYSK.scala -> toSet
 /home/emeric/nysk/src/main/scala/NYSK.scala -> toString
-/home/emeric/nysk/src/main/scala/NYSK.scala -> topConceptDocs
-/home/emeric/nysk/src/main/scala/NYSK.scala -> topConceptTerms
-/home/emeric/nysk/src/main/scala/NYSK.scala -> topDocsInTopConcepts
-/home/emeric/nysk/src/main/scala/NYSK.scala -> topTermsInTopConcepts
-/home/emeric/nysk/src/main/scala/NYSK.scala -> unchecked
+/home/emeric/nysk/src/main/scala/NYSK.scala -> transform
+/home/emeric/nysk/src/main/scala/NYSK.scala -> v
+/home/emeric/nysk/src/main/scala/NYSK.scala -> v1
+/home/emeric/nysk/src/main/scala/NYSK.scala -> v2
+/home/emeric/nysk/src/main/scala/NYSK.scala -> vNb
+/home/emeric/nysk/src/main/scala/NYSK.scala -> vSum
+/home/emeric/nysk/src/main/scala/NYSK.scala -> v_v_Idempotent_Op_Double_OpAdd
 /home/emeric/nysk/src/main/scala/NYSK.scala -> value
-/home/emeric/nysk/src/main/scala/NYSK.scala -> withFilter
+/home/emeric/nysk/src/main/scala/NYSK.scala -> vectors
+/home/emeric/nysk/src/main/scala/NYSK.scala -> vv
+/home/emeric/nysk/src/main/scala/NYSK.scala -> w2vModel
+/home/emeric/nysk/src/main/scala/NYSK.scala -> w2vecRepr
+/home/emeric/nysk/src/main/scala/NYSK.scala -> word
 /home/emeric/nysk/src/main/scala/NYSK.scala -> x
 /home/emeric/nysk/src/main/scala/NYSK.scala -> xml
 /home/emeric/nysk/src/main/scala/NYSK.scala -> y
-/home/emeric/nysk/src/main/scala/NYSK.scala -> zip
+/home/emeric/nysk/src/main/scala/NYSK.scala -> zeros
 product stamps:
-12 items
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anon$1.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$1.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$2.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3$$anonfun$apply$1.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$loadArticle$1.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$1.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$2$$anonfun$apply$2.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$2$$anonfun$apply$3.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$2.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$.class -> lastModified(1487176889000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK.class -> lastModified(1487176889000)
+19 items
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anon$1.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$1.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$2.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3$$anonfun$apply$1.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$4.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5$$anonfun$apply$2.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6$$anonfun$apply$3$$anonfun$apply$4.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6$$anonfun$apply$3.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8$$anonfun$apply$5.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9$$anonfun$apply$6.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$loadArticle$1.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$.class -> lastModified(1487279574000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK.class -> lastModified(1487279574000)
 source stamps:
 1 items
-/home/emeric/nysk/src/main/scala/NYSK.scala -> hash(a765d23d2e88c35f99baa22b2c928e8c71411fcd)
+/home/emeric/nysk/src/main/scala/NYSK.scala -> hash(2f1e37b4e14271528655cb0fca9b1e4a94c2ca18)
 binary stamps:
-8 items
+9 items
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> lastModified(1381127427000)
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar -> lastModified(1381127785000)
 /home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar -> lastModified(1481871775000)
 /home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar -> lastModified(1481871825000)
 /home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> lastModified(1425002069000)
 /home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar -> lastModified(1452974458000)
-/home/emeric/nysk/lib/lsa.jar -> lastModified(1487176876000)
+/home/emeric/nysk/lib/common.jar -> lastModified(1487198031000)
+/home/emeric/nysk/lib/lsa.jar -> lastModified(1487198160000)
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar -> lastModified(1484931606000)
 class names:
-8 items
+9 items
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> org.apache.hadoop.conf.Configuration
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar -> org.apache.hadoop.mapreduce.InputFormat
-/home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar -> org.apache.spark.rdd.RDD$
-/home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar -> org.apache.spark.mllib.linalg.Vector
+/home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar -> org.apache.spark.SparkContext$
+/home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar -> org.apache.spark.mllib.feature.Word2VecModel
 /home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> scala.math.Ordering
-/home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar -> breeze.linalg.SparseVector$
-/home/emeric/nysk/lib/lsa.jar -> edu.stanford.nlp.process.PTBTokenizer
+/home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar -> breeze.linalg.Vector$
+/home/emeric/nysk/lib/common.jar -> com.cloudera.datascience.common.XmlInputFormat
+/home/emeric/nysk/lib/lsa.jar -> edu.stanford.nlp.ling.CoreLabel
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar -> java.lang.Object
 internal apis:
 1 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> 
-rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwZFGHxAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAFzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHApi20hdAAHb3JkZXJlZHVxAH4ACQAAABxzcQB+AAuI8VzBdAAGbm90aWZ5c3EAfgALpyJuFXQABHdhaXRzcQB+AAtaBlEhdAANJGFzSW5zdGFuY2VPZnNxAH4AC6M3tqt0AAZlcXVhbHNzcQB+AAt/SWX7dAAETllTS3NxAH4AC/TNKIB0AAtleHRyYWN0VGV4dHNxAH4AC/xAA250AAxhc0luc3RhbmNlT2ZzcQB+AAtcM+todAAMc3luY2hyb25pemVkc3EAfgALrWFnvnQADSRpc0luc3RhbmNlT2ZzcQB+AAvbFNDodAALbG9hZEFydGljbGVzcQB+AAtiPaF5dAAEbWFpbnNxAH4AC4eqZb90AAlub3RpZnlBbGxzcQB+AAsbvtf8dAAMaXNJbnN0YW5jZU9mc3EAfgAL9263kXQADGV4dHJhY3RUaXRsZXNxAH4AC32IY4R0AAtleHRyYWN0RGF0ZXNxAH4ACy88UIN0AAI9PXNxAH4ACwPHiUN0AAVjbG9uZXNxAH4AC0lQJnx0AApleHRyYWN0QWxsc3EAfgALQ1VSJHQADWV4dHJhY3RTb3VyY2VzcQB+AAsMV5jwdAAIdG9TdHJpbmdzcQB+AAszHswzdAACIT1zcQB+AAvqSJ/hdAAIZ2V0Q2xhc3NzcQB+AAs/WTmndAAOZXh0cmFjdFN1bW1hcnlzcQB+AAsyMToXdAACbmVzcQB+AAsW9OZpdAACZXFzcQB+AAtxvG0TdAACIyNzcQB+AAv8RD12dAAIZmluYWxpemVzcQB+AAumTBjddAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBReHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADHhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAcQB+ABl1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AGhzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AUUwACWluaGVyaXRlZHEAfgBRTAAHcGFyZW50c3EAfgBReHEAfgBtc3EAfgBodXEAfgBMAAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBScQB+AFt1cQB+AFwAAAAAc3EAfgBeAHEAfgAldXEAfgBgAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADEwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AGx0AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBsc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADHhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCIdXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AAxMAAN0cGVxAH4AdXhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AY3QABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AfFsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AbHNxAH4Ae3QABUFycmF5cQB+AIF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4Ae3QABlN0cmluZ3NxAH4Af3NxAH4AgnVxAH4AhQAAAANzcQB+AId0AARqYXZhc3EAfgCHdAAEbGFuZ3EAfgCMc3EAfgBodXEAfgBMAAAAAHNxAH4AaHVxAH4AoAAAAAJzcQB+AHt0AAZPYmplY3RxAH4ApHNxAH4Ae3QAA0FueXEAfgCBdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAABzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVpCplgFdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgAMTAAPc291cmNlRGlyZWN0b3J5cQB+AAx4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABSnZdI9LojDX5m6oissko6McUEfzQ==
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwn+bYzwAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAFzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHApi20hdAAHb3JkZXJlZHVxAH4ACQAAAB5zcQB+AAuI8VzBdAAGbm90aWZ5c3EAfgALpyJuFXQABHdhaXRzcQB+AAtaBlEhdAANJGFzSW5zdGFuY2VPZnNxAH4AC/TYME50AApleHRyYWN0SW50c3EAfgALoze2q3QABmVxdWFsc3NxAH4AC39JZft0AAROWVNLc3EAfgAL/EADbnQADGFzSW5zdGFuY2VPZnNxAH4AC92HJOV0AAh0b0JyZWV6ZXNxAH4AC1wz62h0AAxzeW5jaHJvbml6ZWRzcQB+AAutYWe+dAANJGlzSW5zdGFuY2VPZnNxAH4AC9sU0Oh0AAtsb2FkQXJ0aWNsZXNxAH4AC2I9oXl0AARtYWluc3EAfgALh6plv3QACW5vdGlmeUFsbHNxAH4ACxu+1/x0AAxpc0luc3RhbmNlT2ZzcQB+AAt9iGOEdAALZXh0cmFjdERhdGVzcQB+AAsvPFCDdAACPT1zcQB+AAsDx4lDdAAFY2xvbmVzcQB+AAtyp+IGdAAKZXh0cmFjdEFsbHNxAH4AC96TM/J0AA1leHRyYWN0U3RyaW5nc3EAfgALDFeY8HQACHRvU3RyaW5nc3EAfgAL8hOdlHQACmZyb21CcmVlemVzcQB+AAszHswzdAACIT1zcQB+AAvqSJ/hdAAIZ2V0Q2xhc3NzcQB+AAuxAuV2dAAOc2NhbGFyTXVsdGlwbHlzcQB+AAsyMToXdAACbmVzcQB+AAt2RqpWdAADYWRkc3EAfgALFvTmaXQAAmVxc3EAfgALcbxtE3QAAiMjc3EAfgAL/EQ9dnQACGZpbmFsaXplc3EAfgALpkwY3XQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AVXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AAx4cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHEAfgAbdXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBsc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AFVMAAlpbmhlcml0ZWRxAH4AVUwAB3BhcmVudHNxAH4AVXhxAH4AcXNxAH4AbHVxAH4AUAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AVnEAfgBfdXEAfgBgAAAAAHNxAH4AYgBxAH4AJ3VxAH4AZAAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AAxMAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBwdAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AcHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AAx4cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AjHVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgAMTAADdHBlcQB+AHl4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AGd0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AIBbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AHBzcQB+AH90AAVBcnJheXEAfgCFdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AH90AAZTdHJpbmdzcQB+AINzcQB+AIZ1cQB+AIkAAAADc3EAfgCLdAAEamF2YXNxAH4Ai3QABGxhbmdxAH4AkHNxAH4AbHVxAH4AUAAAAABzcQB+AGx1cQB+AKQAAAACc3EAfgB/dAAGT2JqZWN0cQB+AKhzcQB+AH90AANBbnlxAH4AhXVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAAc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFaSMU0dHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADEwAD3NvdXJjZURpcmVjdG9yeXEAfgAMeHB0ACsvaG9tZS9lbWVyaWMvbnlzay90YXJnZXQvc2NhbGEtMi4xMC9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAULx43tOFCcVKGVcsPypseSpTCyhg=
 external apis:
 0 items
 source infos:
@@ -313,8 +391,14 @@ source infos:
 /home/emeric/nysk/src/main/scala/NYSK.scala -> 
 AAAAAAAAAAA=
 compilations:
-4 items
+10 items
 0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWj0raRV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkIdA2Z1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkJBG2Z1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 3 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkKmWAV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+4 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkhqduB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+5 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkiAgmR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+6 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkiwXDd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+7 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkiyghB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+8 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWki0xE91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+9 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWkjFNHR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
