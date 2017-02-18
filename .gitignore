@@ -3,3 +3,4 @@ metastore_db/*
 *.jar
 *.class
 *.cache
+nysk.xml
