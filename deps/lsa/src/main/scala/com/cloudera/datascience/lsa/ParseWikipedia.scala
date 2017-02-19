@@ -147,7 +147,7 @@ object ParseWikipedia {
       val originalText = token.originalText().toLowerCase;
       if (originalText.length > 2 
           && !stopWords.contains(originalText) 
-          && hasLetters(token)) {
+          && hasLetters(originalText)) {
         tokens += originalText
       }
     }

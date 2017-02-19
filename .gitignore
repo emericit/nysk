@@ -5,3 +5,8 @@ metastore_db/
 *.cache
 *.xml
 target/
+project/
+deps/
+lib/
+*~ 
+*.old

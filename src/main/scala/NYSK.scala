@@ -92,9 +92,10 @@ object NYSK {
   def main(args: Array[String]) {
     val conf = new SparkConf().setAppName("NYSK")
     conf.set("spark.hadoop.validateOutputSpecs", "false")
+    val sc = new SparkContext(conf)
+
     val hadoopConf = new org.apache.hadoop.conf.Configuration()
     val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://localhost:9000"), hadoopConf)
-    val sc = new SparkContext(conf)
     val nysk_raw = loadArticle(sc, "/user/emeric/nysk.xml")
     val nysk_xml: RDD[Elem] = nysk_raw.map(XML.loadString)
     //val nysk_timestamps: RDD[java.sql.Timestamp] = nysk_xml.map(extractDate)
@@ -109,7 +110,7 @@ object NYSK {
     val w2vModel = Word2VecModel.load(sc, "/user/emeric/w2vModel")
     // obtenir une Map[String, Array[Float]] sérializable
     //   mapValues seul ne retourne pas une map sérializable (SI-7005)
-    val vectors = w2vModel.getVectors.mapValues(vv => Vectors.dense(vv.map(_.toDouble))).map(identity)
+    val vectors = w2vModel.getVectors.mapValues(vv => org.apache.spark.mllib.linalg.Vectors.dense(vv.map(_.toDouble))).map(identity)
     // transmettre la map aux noeuds de calcul
     val bVectors = sc.broadcast(vectors)
 
