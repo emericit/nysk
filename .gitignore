@@ -1,6 +1,7 @@
 *.log
-metastore_db/*
+metastore_db/
 *.jar
 *.class
 *.cache
-nysk.xml
+*.xml
+target/
