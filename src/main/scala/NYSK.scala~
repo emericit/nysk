@@ -36,6 +36,16 @@ object NYSK {
   def fromBreeze(bv:BVector[Double]) = Vectors.dense(bv.toArray)
   def add(v1:Vector, v2:Vector) = fromBreeze(toBreeze(v1) + toBreeze(v2))
   def scalarMultiply(a:Double, v:Vector) = fromBreeze(a * toBreeze(v))
+  def stackVectors(v1:Vector, v2:Vector) = {
+    var v3 = Vectors.zeros(v1.size+v2.size)
+          for (i <- 0 until v1.size) {
+              BVector(v3.toArray)(i) = v1(i);
+          }
+          for (i <- 0 until v2.size) {
+              BVector(v3.toArray)(v1.size+i) = v2(i);
+          }
+    v3
+  }
 
   // Séparation du fichier XML en un RDD où chaque élément est un article
   // Retourne un RDD de String à partir du fichier "path"
@@ -79,8 +89,12 @@ object NYSK {
     return x
   }
 
-  def extractAll(elem: scala.xml.Elem): (Int, java.sql.Timestamp, String) = {
-    return (extractInt(elem,"docid"), extractDate(elem), extractString(elem,"text"))
+  def extractAll(elem: scala.xml.Elem, whatText: String = "text"): (Int, java.sql.Timestamp, String) = {
+    return (extractInt(elem,"docid"), extractDate(elem), extractString(elem,whatText))
+  }
+
+ def extractText(elem: scala.xml.Elem): String = {
+    return (extractString(elem,"title") + " " + extractString(elem,"summary") + " " + extractString(elem,"text"))
   }
 
 
@@ -90,18 +104,43 @@ object NYSK {
   }
 
   def main(args: Array[String]) {
+    var textToExtract = "text";
+    var useW2Vec = true;
+    var weightTfIdf = true;
+    println ("*****");
+    for (s <- args) {
+        s match {
+            case "w2vec" => useW2Vec = true;
+            case "now2vec" => useW2Vec = false;
+            case "weighttfidf" => weightTfIdf = true;
+            case "weight1" => weightTfIdf = false;
+            case "text" => textToExtract = "text";
+            case "title" => textToExtract = "title";
+            case "summary" => textToExtract = "summary";
+            case _ => println("Unrecognized option: " + s.toString);
+        }
+    }
+    println("Extracting " + textToExtract);
+    if (useW2Vec) {
+        println("Using w2vec with weights " + { if (weightTfIdf) "TfIdf" else "1" });
+    }
+    else {
+        println("No w2vec");
+    }
+    println ("*****");
     val conf = new SparkConf().setAppName("NYSK")
     conf.set("spark.hadoop.validateOutputSpecs", "false")
+    val sc = new SparkContext(conf)
+
     val hadoopConf = new org.apache.hadoop.conf.Configuration()
     val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://localhost:9000"), hadoopConf)
-    val sc = new SparkContext(conf)
-    val nysk_raw = loadArticle(sc, "/user/emeric/nysk.xml")
+    val nysk_raw = loadArticle(sc, "/user/emeric/nysk.xml")/*.sample(false,0.01)*/
     val nysk_xml: RDD[Elem] = nysk_raw.map(XML.loadString)
     //val nysk_timestamps: RDD[java.sql.Timestamp] = nysk_xml.map(extractDate)
     /*println(nysk_raw.count() + " articles covering " + nysk_timestamps.min() + " to " + nysk_timestamps.max())*/
     //val nysk_texts: RDD[String] = nysk_xml.map(extractText)
     /*println(nysk_texts.count())*/
-    val nysk: RDD[(Int, java.sql.Timestamp, String)] = nysk_xml.map(extractAll)
+    val nysk: RDD[(Int, java.sql.Timestamp, String)] = nysk_xml.map(e => extractAll(e,textToExtract))
 
     val stopwords = sc.textFile("/user/emeric/stopwords.txt").collect.toArray.toSet
     val stopwordsBroadcast = sc.broadcast(stopwords).value
@@ -109,9 +148,16 @@ object NYSK {
     val w2vModel = Word2VecModel.load(sc, "/user/emeric/w2vModel")
     // obtenir une Map[String, Array[Float]] sérializable
     //   mapValues seul ne retourne pas une map sérializable (SI-7005)
-    val vectors = w2vModel.getVectors.mapValues(vv => Vectors.dense(vv.map(_.toDouble))).map(identity)
+    val vectors = w2vModel.getVectors.mapValues(vv => org.apache.spark.mllib.linalg.Vectors.dense(vv.map(_.toDouble))).map(identity)
     // transmettre la map aux noeuds de calcul
     val bVectors = sc.broadcast(vectors)
+
+    val w2vModel2 = Word2VecModel.load(sc, "/user/emeric/w2vModel2")
+    // obtenir une Map[String, Array[Float]] sérializable
+    //   mapValues seul ne retourne pas une map sérializable (SI-7005)
+    val vectors2 = w2vModel2.getVectors.mapValues(vv => org.apache.spark.mllib.linalg.Vectors.dense(vv.map(_.toDouble))).map(identity)
+    // transmettre la map aux noeuds de calcul
+    val bVectors2 = sc.broadcast(vectors2)
 
     // mapPartitions pour ne pas initialiser le NLPPIpeline 1 fois par élément du RDD
     // mais une fois par noeud de calcul
@@ -119,49 +165,80 @@ object NYSK {
       val pipeline = com.cloudera.datascience.lsa.ParseWikipedia.createNLPPipeline();
       iter.map {
         case (docid, date, text) =>
-          (docid,
-            com.cloudera.datascience.lsa.ParseWikipedia.plainTextToLemmas(text, stopwordsBroadcast, pipeline))
+          (docid.toString,
+            com.cloudera.datascience.lsa.ParseWikipedia.plainTextToLemmas(text.toLowerCase.split("\\W+").mkString(" "), stopwordsBroadcast, pipeline))
       };
     })
 
-    var w2vecRepr = lemmatized.map({ case (docid, lemmas) => 
-      var vSum = Vectors.zeros(100)
-      var vNb = 0
-      lemmas.foreach { word =>
-           bVectors.value.get(word).foreach { v =>
-                vSum = add(v, vSum)
-                vNb += 1
-           }
-      }
-      if (vNb != 0) {
-           vSum = scalarMultiply(1.0 / vNb, vSum)
-      }
-      (docid, vSum)
-    })/*.filter(vec => Vectors.norm(vec, 1.0) > 0.0)*/.persist()
+    val numTerms = 1000;
+    val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, numTerms, sc);
+    termDocMatrix.cache();
 
-    val matRDD = w2vecRepr.map{v => v._2}.cache()
-    val mat = new RowMatrix(matRDD)
-    val matrixTxt = mat.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
-    // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-    val outputMatrix = "/user/emeric/matrice.txt"
-    try { hdfs.delete(new org.apache.hadoop.fs.Path(outputMatrix), true) } 
-    catch { case _ : Throwable => { } }
-    matrixTxt.saveAsTextFile(outputMatrix)
+    if (! useW2Vec) {
+        val mat = new RowMatrix(termDocMatrix)
+        val k = 10 // nombre de valeurs singuliers à garder
+        val svd = mat.computeSVD(k, computeU=true)
+        val projections = mat.multiply(svd.V)
+        val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
+        // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
+        val outputProjection = "/user/emeric/projection.txt"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
+        catch { case _ : Throwable => { } }
+        projectionsTxt.saveAsTextFile(outputProjection)
+    }
+    else {
+        val idTerms = termIds.map(_.swap)
 
-    val centRed = new StandardScaler(withMean = true, withStd = true).fit(matRDD)
-    val matCR: RowMatrix = new RowMatrix(centRed.transform(matRDD))
-    val matCompPrinc = matCR.computePrincipalComponents(10)
-    val projections = matCR.multiply(matCompPrinc)
-    val matSummary = projections.computeColumnSummaryStatistics()
-    val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
-    
-    // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-    val outputProjection = "/user/emeric/projection.txt"
-    try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
-    catch { case _ : Throwable => { } }
-    projectionsTxt.saveAsTextFile(outputProjection)
+        val pairs = termDocMatrix.zip(lemmatized);
 
+        var w2vecRepr = pairs.map({ case (row, (docid, lemmas)) => 
+          var vSum = Vectors.zeros(10)
+          var totalWeight: Double = 0
+          val words = lemmas.toSet
+          words.foreach { word =>
+               val colId = idTerms.get(word);
+               if (colId != None) {
+                   var weight = row(colId.get);
+                   if (! weightTfIdf) {
+                       weight = 1.;
+                   }
+                   val wvec = bVectors2.value.get(word)
+                   if (wvec != None) {          
+                       vSum = add(scalarMultiply(weight, wvec.get), vSum)
+                       totalWeight += weight
+                   }
+               }
+          }
+          if (totalWeight > 0) {
+               vSum = scalarMultiply(1.0 / totalWeight, vSum)
+          }
+          else {
+               vSum = Vectors.zeros(100);
+          }
+          (docid, vSum)
+        }).filter(vec => Vectors.norm(vec._2, 1.0) > 0.0).persist() 
+        val matRDD = w2vecRepr.map{v => v._2}.cache()
+        val mat = new RowMatrix(matRDD)
+        val matrixTxt = mat.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
+        // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
+        val outputMatrix = "/user/emeric/matrice.txt"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputMatrix), true) } 
+        catch { case _ : Throwable => { } }
+        matrixTxt.saveAsTextFile(outputMatrix)
 
+        val centRed = new StandardScaler(withMean = true, withStd = true).fit(matRDD)
+        val matCR: RowMatrix = new RowMatrix(centRed.transform(matRDD))
+
+        val matCompPrinc = matCR.computePrincipalComponents(10)
+        val projections = matCR.multiply(matCompPrinc)
+        val matSummary = projections.computeColumnSummaryStatistics()
+        val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
+        // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
+        val outputProjection = "/user/emeric/projection.txt"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
+        catch { case _ : Throwable => { } }
+        projectionsTxt.saveAsTextFile(outputProjection)
+    }
     /*val numTerms = 1000;
     val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, /*stopwordsBroadcast,*/ numTerms, sc);
     termDocMatrix.cache()

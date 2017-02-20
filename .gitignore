@@ -1,4 +1,6 @@
 *.log
+text?
+enwik?
 metastore_db/
 *.jar
 *.class

@@ -73,6 +73,48 @@ object ParseWikipedia {
     (vecs, termIds.map(_.swap), docIds, idfs)
   }
 
+  /**
+   * Returns a term-document matrix where each element is the TF-IDF of the row's document and
+   * the column's term.
+   */
+  def tfidfMatrix(docs: RDD[(Int, Seq[String])], numTerms: Int,
+      sc: SparkContext): (RDD[Vector], Map[Int, String], Map[Long, Int], Map[String, Double]) = {
+    val docTermFreqs = docs.mapValues(terms => {
+      val termFreqsInDoc = terms.foldLeft(new HashMap[String, Int]()) {
+        (map, term) => map += term -> (map.getOrElse(term, 0) + 1)
+      }
+      termFreqsInDoc
+    })
+
+    docTermFreqs.cache()
+    val docIds = docTermFreqs.map(_._1).zipWithUniqueId().map(_.swap).collectAsMap()
+
+    val docFreqs = documentFrequenciesDistributed(docTermFreqs.map(_._2), numTerms)
+    println("Number of terms: " + docFreqs.size)
+    saveDocFreqs("docfreqs.tsv", docFreqs)
+
+    val numDocs = docIds.size
+
+    val idfs = inverseDocumentFrequencies(docFreqs, numDocs)
+
+    // Maps terms to their indices in the vector
+    val termIds = idfs.keys.zipWithIndex.toMap
+
+    val bIdfs = sc.broadcast(idfs).value
+    val bTermIds = sc.broadcast(termIds).value
+
+    val vecs = docTermFreqs.map(_._2).map(termFreqs => {
+      val docTotalTerms = termFreqs.values().sum
+      val termScores = termFreqs.filter {
+        case (term, freq) => bTermIds.containsKey(term)
+      }.map{
+        case (term, freq) => (bTermIds(term), bIdfs(term) * termFreqs(term) / docTotalTerms)
+      }.toSeq
+      Vectors.sparse(bTermIds.size, termScores)
+    })
+    (vecs, termIds.map(_.swap), docIds, idfs)
+  }
+
   def documentFrequencies(docTermFreqs: RDD[HashMap[String, Int]]): HashMap[String, Int] = {
     val zero = new HashMap[String, Int]()
     def merge(dfs: HashMap[String, Int], tfs: HashMap[String, Int])
