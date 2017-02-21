@@ -134,7 +134,7 @@ object NYSK {
 
     val hadoopConf = new org.apache.hadoop.conf.Configuration()
     val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://localhost:9000"), hadoopConf)
-    val nysk_raw = loadArticle(sc, "/user/emeric/nysk.xml")/*.sample(false,0.01)*/
+    val nysk_raw = loadArticle(sc, "hdfs://head.local:9000/user/emeric/nysk.xml")/*.sample(false,0.01)*/
     val nysk_xml: RDD[Elem] = nysk_raw.map(XML.loadString)
     //val nysk_timestamps: RDD[java.sql.Timestamp] = nysk_xml.map(extractDate)
     /*println(nysk_raw.count() + " articles covering " + nysk_timestamps.min() + " to " + nysk_timestamps.max())*/
@@ -142,17 +142,17 @@ object NYSK {
     /*println(nysk_texts.count())*/
     val nysk: RDD[(Int, java.sql.Timestamp, String)] = nysk_xml.map(e => extractAll(e,textToExtract))
 
-    val stopwords = sc.textFile("/user/emeric/stopwords.txt").collect.toArray.toSet
+    val stopwords = sc.textFile("hdfs://head.local:9000/user/emeric/stopwords.txt").collect.toArray.toSet
     val stopwordsBroadcast = sc.broadcast(stopwords).value
 
-    val w2vModel = Word2VecModel.load(sc, "/user/emeric/w2vModel")
+    val w2vModel = Word2VecModel.load(sc, "hdfs://head.local:9000/user/emeric/w2vModel")
     // obtenir une Map[String, Array[Float]] sérializable
     //   mapValues seul ne retourne pas une map sérializable (SI-7005)
     val vectors = w2vModel.getVectors.mapValues(vv => org.apache.spark.mllib.linalg.Vectors.dense(vv.map(_.toDouble))).map(identity)
     // transmettre la map aux noeuds de calcul
     val bVectors = sc.broadcast(vectors)
 
-    val w2vModel2 = Word2VecModel.load(sc, "/user/emeric/w2vModel2")
+    val w2vModel2 = Word2VecModel.load(sc, "hdfs://head.local:9000/user/emeric/w2vModel2")
     // obtenir une Map[String, Array[Float]] sérializable
     //   mapValues seul ne retourne pas une map sérializable (SI-7005)
     val vectors2 = w2vModel2.getVectors.mapValues(vv => org.apache.spark.mllib.linalg.Vectors.dense(vv.map(_.toDouble))).map(identity)
@@ -181,7 +181,7 @@ object NYSK {
         val projections = mat.multiply(svd.V)
         val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
         // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-        val outputProjection = "/user/emeric/projection.txt"
+        val outputProjection = "hdfs://head.local:9000/user/emeric/projection.txt"
         try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
         catch { case _ : Throwable => { } }
         projectionsTxt.saveAsTextFile(outputProjection)
@@ -221,7 +221,7 @@ object NYSK {
         val mat = new RowMatrix(matRDD)
         val matrixTxt = mat.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
         // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-        val outputMatrix = "/user/emeric/matrice.txt"
+        val outputMatrix = "hdfs://head.local:9000/user/emeric/matrice.txt"
         try { hdfs.delete(new org.apache.hadoop.fs.Path(outputMatrix), true) } 
         catch { case _ : Throwable => { } }
         matrixTxt.saveAsTextFile(outputMatrix)
@@ -234,7 +234,7 @@ object NYSK {
         val matSummary = projections.computeColumnSummaryStatistics()
         val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
         // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-        val outputProjection = "/user/emeric/projection.txt"
+        val outputProjection = "hdfs://head.local:9000/user/emeric/projection.txt"
         try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
         catch { case _ : Throwable => { } }
         projectionsTxt.saveAsTextFile(outputProjection)

@@ -8,6 +8,8 @@
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$13$$anonfun$apply$6.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$7.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7.class[0m
+[0m[[0mdebug[0m] [0m	NYSK$$anonfun$6$$anonfun$apply$3$$anonfun$apply$4.class[0m
+[0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6$$anonfun$apply$3$$anonfun$apply$4.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$3.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$stackVectors$2.class[0m
@@ -54,8 +56,12 @@
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$10$$anonfun$apply$5.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$3$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3$$anonfun$apply$1.class[0m
+[0m[[0mdebug[0m] [0m	NYSK$$anonfun$8$$anonfun$apply$5.class[0m
+[0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8$$anonfun$apply$5.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$9.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9.class[0m
+[0m[[0mdebug[0m] [0m	NYSK$$anonfun$9$$anonfun$apply$6.class[0m
+[0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9$$anonfun$apply$6.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$6.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$loadArticle$1.class[0m
@@ -68,6 +74,8 @@
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$1.class[0m
 [0m[[0mdebug[0m] [0m	NYSK.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK.class[0m
+[0m[[0mdebug[0m] [0m	NYSK$$anonfun$6$$anonfun$apply$3.class[0m
+[0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6$$anonfun$apply$3.class[0m
 [0m[[0mdebug[0m] [0m	NYSK$$anonfun$stackVectors$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$stackVectors$1.class[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

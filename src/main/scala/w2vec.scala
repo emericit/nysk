@@ -82,8 +82,8 @@ object w2vec {
     val sc = new SparkContext(conf)
 
     val hadoopConf = new org.apache.hadoop.conf.Configuration()
-    val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://localhost:9000"), hadoopConf)
-    val nysk_raw = loadArticle(sc, "/user/emeric/nysk.xml")/*.sample(false,0.01)*/
+    val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://head.local:9000"), hadoopConf)
+    val nysk_raw = loadArticle(sc, "hdfs://head.local:9000/user/emeric/nysk.xml")/*.sample(false,0.01)*/
     val nysk_xml: RDD[Elem] = nysk_raw.map(XML.loadString)
     val nysk: RDD[Seq[String]] = nysk_xml.map(e => extractText(e).split(" ").toSeq)
 
@@ -91,7 +91,10 @@ object w2vec {
 
     val word2vec = new Word2Vec()
     val w2vModel = word2vec.fit(input.union(nysk))    
-    w2vModel.save(sc, "w2vModel2")
+    val outputModel = "hdfs://head.local:9000/user/emeric/w2vModel2"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputModel), true) } 
+        catch { case _ : Throwable => { } }
+    w2vModel.save(sc, outputModel)
     sc.stop()
   }
 }

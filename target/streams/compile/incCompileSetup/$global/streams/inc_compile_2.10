@@ -11,7 +11,7 @@ javac options:
 0 items
 compiler version:
 1 items
-0 -> 2.10.5
+0 -> 2.10.6
 compile order:
 1 items
 0 -> Mixed
@@ -56,22 +56,23 @@ products:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/nysk/target/scala-2.10/classes/w2vec$.class
 /home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/nysk/target/scala-2.10/classes/w2vec.class
 binary dependencies:
-15 items
+16 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar
-/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/lib/common.jar
 /home/emeric/nysk/src/main/scala/NYSK.scala -> /home/emeric/nysk/lib/lsa.jar
-/home/emeric/nysk/src/main/scala/NYSK.scala -> /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+/home/emeric/nysk/src/main/scala/NYSK.scala -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar
 /home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar
 /home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar
 /home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar
 /home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar
-/home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar
-/home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/nysk/lib/lsa.jar
-/home/emeric/nysk/src/main/scala/w2vec.scala -> /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+/home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+/home/emeric/nysk/src/main/scala/w2vec.scala -> /home/emeric/nysk/lib/common.jar
+/home/emeric/nysk/src/main/scala/w2vec.scala -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar
 direct source dependencies:
 0 items
 direct external dependencies:
@@ -126,7 +127,7 @@ class names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> w2vec$$anonfun$3
 /home/emeric/nysk/src/main/scala/w2vec.scala -> w2vec$$anonfun$loadArticle$1
 used names:
-422 items
+427 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> !=
 /home/emeric/nysk/src/main/scala/NYSK.scala -> $anon
 /home/emeric/nysk/src/main/scala/NYSK.scala -> &
@@ -450,6 +451,7 @@ used names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Nothing
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Object
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Ordering
+/home/emeric/nysk/src/main/scala/w2vec.scala -> Path
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Predef
 /home/emeric/nysk/src/main/scala/w2vec.scala -> RDD
 /home/emeric/nysk/src/main/scala/w2vec.scala -> S
@@ -464,6 +466,7 @@ used names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> T2
 /home/emeric/nysk/src/main/scala/w2vec.scala -> T3
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Text
+/home/emeric/nysk/src/main/scala/w2vec.scala -> Throwable
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Timestamp
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Tuple2
 /home/emeric/nysk/src/main/scala/w2vec.scala -> Tuple3
@@ -488,6 +491,7 @@ used names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> conf
 /home/emeric/nysk/src/main/scala/w2vec.scala -> d
 /home/emeric/nysk/src/main/scala/w2vec.scala -> datascience
+/home/emeric/nysk/src/main/scala/w2vec.scala -> delete
 /home/emeric/nysk/src/main/scala/w2vec.scala -> dn
 /home/emeric/nysk/src/main/scala/w2vec.scala -> e
 /home/emeric/nysk/src/main/scala/w2vec.scala -> elem
@@ -505,6 +509,7 @@ used names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> getTime
 /home/emeric/nysk/src/main/scala/w2vec.scala -> hadoop
 /home/emeric/nysk/src/main/scala/w2vec.scala -> hadoopConf
+/home/emeric/nysk/src/main/scala/w2vec.scala -> hdfs
 /home/emeric/nysk/src/main/scala/w2vec.scala -> in
 /home/emeric/nysk/src/main/scala/w2vec.scala -> input
 /home/emeric/nysk/src/main/scala/w2vec.scala -> io
@@ -521,6 +526,7 @@ used names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> nysk_raw
 /home/emeric/nysk/src/main/scala/w2vec.scala -> nysk_xml
 /home/emeric/nysk/src/main/scala/w2vec.scala -> org
+/home/emeric/nysk/src/main/scala/w2vec.scala -> outputModel
 /home/emeric/nysk/src/main/scala/w2vec.scala -> package
 /home/emeric/nysk/src/main/scala/w2vec.scala -> parse
 /home/emeric/nysk/src/main/scala/w2vec.scala -> path
@@ -551,79 +557,86 @@ used names:
 /home/emeric/nysk/src/main/scala/w2vec.scala -> y
 product stamps:
 35 items
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anon$1.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$1.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$10$$anonfun$apply$5.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$10.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$11.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$12.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$13$$anonfun$apply$6.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$13.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$14$$anonfun$apply$7.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$14.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$2.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3$$anonfun$apply$1.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$4.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5$$anonfun$apply$2.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7$$anonfun$apply$3.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8$$anonfun$apply$4.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$loadArticle$1.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$1.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$stackVectors$1.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$stackVectors$2.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK$.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/NYSK.class -> lastModified(1487606635000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anon$1.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$1.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$2.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$3.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$loadArticle$1.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec$.class -> lastModified(1487606636000)
-/home/emeric/nysk/target/scala-2.10/classes/w2vec.class -> lastModified(1487606636000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anon$1.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$1.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$10$$anonfun$apply$5.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$10.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$11.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$12.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$13$$anonfun$apply$6.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$13.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$14$$anonfun$apply$7.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$14.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$2.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3$$anonfun$apply$1.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$3.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$4.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5$$anonfun$apply$2.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$5.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$6.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7$$anonfun$apply$3.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$7.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8$$anonfun$apply$4.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$8.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$9.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$loadArticle$1.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$main$1.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$stackVectors$1.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$$anonfun$stackVectors$2.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK$.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/NYSK.class -> lastModified(1487672480000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anon$1.class -> lastModified(1487678165000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$1.class -> lastModified(1487678165000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$2.class -> lastModified(1487678165000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$3.class -> lastModified(1487678165000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec$$anonfun$loadArticle$1.class -> lastModified(1487678165000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec$.class -> lastModified(1487678165000)
+/home/emeric/nysk/target/scala-2.10/classes/w2vec.class -> lastModified(1487678165000)
 source stamps:
 2 items
-/home/emeric/nysk/src/main/scala/NYSK.scala -> hash(6dbe2e4259705845dc6e8aa8465f9702b0f02e5f)
-/home/emeric/nysk/src/main/scala/w2vec.scala -> hash(31fb2dfbc386313d2dfcf0412450dddf3f7bab8b)
+/home/emeric/nysk/src/main/scala/NYSK.scala -> hash(4128336021bd446e3cd6f6db841b8ef231d5d74e)
+/home/emeric/nysk/src/main/scala/w2vec.scala -> hash(3cd0ac9b2fd321f7e516e7e6d73d83a4f93ef9dd)
 binary stamps:
-8 items
+9 items
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> lastModified(1381127427000)
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar -> lastModified(1381127785000)
 /home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar -> lastModified(1481871775000)
 /home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar -> lastModified(1481871825000)
-/home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> lastModified(1425002069000)
 /home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar -> lastModified(1452974458000)
+/home/emeric/.sbt/boot/scala-2.10.6/lib/scala-library.jar -> lastModified(1442568926000)
+/home/emeric/nysk/lib/common.jar -> lastModified(1487524426000)
 /home/emeric/nysk/lib/lsa.jar -> lastModified(1487524459000)
-/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar -> lastModified(1486494087000)
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar -> lastModified(1484931606000)
 class names:
-8 items
-/home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> org.apache.hadoop.io.LongWritable
+9 items
+/home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar -> org.apache.hadoop.conf.Configuration
 /home/emeric/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar -> org.apache.hadoop.mapreduce.InputFormat
 /home/emeric/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-2.1.0.jar -> org.apache.spark.rdd.RDD
-/home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar -> org.apache.spark.mllib.feature.Word2VecModel
-/home/emeric/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> scala.math.Ordering
-/home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar -> breeze.linalg.package$
-/home/emeric/nysk/lib/lsa.jar -> com.cloudera.datascience.common.XmlInputFormat
-/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar -> java.lang.Object
+/home/emeric/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-2.1.0.jar -> org.apache.spark.mllib.feature.Word2Vec
+/home/emeric/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.12.jar -> breeze.linalg.Vector$
+/home/emeric/.sbt/boot/scala-2.10.6/lib/scala-library.jar -> scala.math.Ordering
+/home/emeric/nysk/lib/common.jar -> com.cloudera.datascience.common.XmlInputFormat
+/home/emeric/nysk/lib/lsa.jar -> edu.stanford.nlp.ling.CoreLabel
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/rt.jar -> java.lang.Object
 internal apis:
 2 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> 
-rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwGhh9CAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAFzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHApi20hdAAHb3JkZXJlZHVxAH4ACQAAACFzcQB+AAuI8VzBdAAGbm90aWZ5c3EAfgALpyJuFXQABHdhaXRzcQB+AAtaBlEhdAANJGFzSW5zdGFuY2VPZnNxAH4AC/TYME50AApleHRyYWN0SW50c3EAfgALoze2q3QABmVxdWFsc3NxAH4AC39JZft0AAROWVNLc3EAfgAL9M0ogHQAC2V4dHJhY3RUZXh0c3EAfgAL/EADbnQADGFzSW5zdGFuY2VPZnNxAH4AC92HJOV0AAh0b0JyZWV6ZXNxAH4AC1wz62h0AAxzeW5jaHJvbml6ZWRzcQB+AAutYWe+dAANJGlzSW5zdGFuY2VPZnNxAH4AC9sU0Oh0AAtsb2FkQXJ0aWNsZXNxAH4AC2I9oXl0AARtYWluc3EAfgAL8kabTnQAFGV4dHJhY3RBbGwkZGVmYXVsdCQyc3EAfgALh6plv3QACW5vdGlmeUFsbHNxAH4ACxu+1/x0AAxpc0luc3RhbmNlT2ZzcQB+AAt9iGOEdAALZXh0cmFjdERhdGVzcQB+AAsvPFCDdAACPT1zcQB+AAsDx4lDdAAFY2xvbmVzcQB+AAv3GnXHdAAKZXh0cmFjdEFsbHNxAH4AC96TM/J0AA1leHRyYWN0U3RyaW5nc3EAfgALDFeY8HQACHRvU3RyaW5nc3EAfgAL8hOdlHQACmZyb21CcmVlemVzcQB+AAszHswzdAACIT1zcQB+AAvqSJ/hdAAIZ2V0Q2xhc3NzcQB+AAuxAuV2dAAOc2NhbGFyTXVsdGlwbHlzcQB+AAs0R7aLdAAMc3RhY2tWZWN0b3Jzc3EAfgALMjE6F3QAAm5lc3EAfgALdkaqVnQAA2FkZHNxAH4ACxb05ml0AAJlcXNxAH4AC3G8bRN0AAIjI3NxAH4AC/xEPXZ0AAhmaW5hbGl6ZXNxAH4AC6ZMGN10AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgAMeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cABxAH4AG3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AcnNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBbTAAJaW5oZXJpdGVkcQB+AFtMAAdwYXJlbnRzcQB+AFt4cQB+AHdzcQB+AHJ1cQB+AFYAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AFxxAH4AZXVxAH4AZgAAAABzcQB+AGgAcQB+ACl1cQB+AGoAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AdnQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AHZzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AJJ1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADEwAA3RwZXEAfgB/eHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBtdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgCGWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgB2c3EAfgCFdAAFQXJyYXlxAH4Ai3VyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgCFdAAGU3RyaW5nc3EAfgCJc3EAfgCMdXEAfgCPAAAAA3NxAH4AkXQABGphdmFzcQB+AJF0AARsYW5ncQB+AJZzcQB+AHJ1cQB+AFYAAAAAc3EAfgBydXEAfgCqAAAAAnNxAH4AhXQABk9iamVjdHEAfgCuc3EAfgCFdAADQW55cQB+AIt1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWlxDrK91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AAxMAA9zb3VyY2VEaXJlY3RvcnlxAH4ADHhwdAArL2hvbWUvZW1lcmljL255c2svdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFG2+LkJZcFhF3G6KqEZflwKw8C5f
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwGhh9CAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAFzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHApi20hdAAHb3JkZXJlZHVxAH4ACQAAACFzcQB+AAuI8VzBdAAGbm90aWZ5c3EAfgALpyJuFXQABHdhaXRzcQB+AAtaBlEhdAANJGFzSW5zdGFuY2VPZnNxAH4AC/TYME50AApleHRyYWN0SW50c3EAfgALoze2q3QABmVxdWFsc3NxAH4AC39JZft0AAROWVNLc3EAfgAL9M0ogHQAC2V4dHJhY3RUZXh0c3EAfgAL/EADbnQADGFzSW5zdGFuY2VPZnNxAH4AC92HJOV0AAh0b0JyZWV6ZXNxAH4AC1wz62h0AAxzeW5jaHJvbml6ZWRzcQB+AAutYWe+dAANJGlzSW5zdGFuY2VPZnNxAH4AC9sU0Oh0AAtsb2FkQXJ0aWNsZXNxAH4AC2I9oXl0AARtYWluc3EAfgAL8kabTnQAFGV4dHJhY3RBbGwkZGVmYXVsdCQyc3EAfgALh6plv3QACW5vdGlmeUFsbHNxAH4ACxu+1/x0AAxpc0luc3RhbmNlT2ZzcQB+AAt9iGOEdAALZXh0cmFjdERhdGVzcQB+AAsvPFCDdAACPT1zcQB+AAsDx4lDdAAFY2xvbmVzcQB+AAv3GnXHdAAKZXh0cmFjdEFsbHNxAH4AC96TM/J0AA1leHRyYWN0U3RyaW5nc3EAfgALDFeY8HQACHRvU3RyaW5nc3EAfgAL8hOdlHQACmZyb21CcmVlemVzcQB+AAszHswzdAACIT1zcQB+AAvqSJ/hdAAIZ2V0Q2xhc3NzcQB+AAuxAuV2dAAOc2NhbGFyTXVsdGlwbHlzcQB+AAs0R7aLdAAMc3RhY2tWZWN0b3Jzc3EAfgALMjE6F3QAAm5lc3EAfgALdkaqVnQAA2FkZHNxAH4ACxb05ml0AAJlcXNxAH4AC3G8bRN0AAIjI3NxAH4AC/xEPXZ0AAhmaW5hbGl6ZXNxAH4AC6ZMGN10AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgAMeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cABxAH4AG3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AcnNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBbTAAJaW5oZXJpdGVkcQB+AFtMAAdwYXJlbnRzcQB+AFt4cQB+AHdzcQB+AHJ1cQB+AFYAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AFxxAH4AZXVxAH4AZgAAAABzcQB+AGgAcQB+ACl1cQB+AGoAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AdnQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AHZzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AJJ1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADEwAA3RwZXEAfgB/eHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBtdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgCGWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgB2c3EAfgCFdAAFQXJyYXlxAH4Ai3VyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgCFdAAGU3RyaW5nc3EAfgCJc3EAfgCMdXEAfgCPAAAAA3NxAH4AkXQABGphdmFzcQB+AJF0AARsYW5ncQB+AJZzcQB+AHJ1cQB+AFYAAAAAc3EAfgBydXEAfgCqAAAAAnNxAH4AhXQABk9iamVjdHEAfgCuc3EAfgCFdAADQW55cQB+AIt1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmAwg+x1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AAxMAA9zb3VyY2VEaXJlY3RvcnlxAH4ADHhwdAArL2hvbWUvZW1lcmljL255c2svdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFEEoM2AhvURuPNb224QbjvIx1ddO
 /home/emeric/nysk/src/main/scala/w2vec.scala -> 
-rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwR30szAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAFzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHAvdfyzdAAHb3JkZXJlZHVxAH4ACQAAABxzcQB+AAv/iFdZdAAGbm90aWZ5c3EAfgALf3MYynQABHdhaXRzcQB+AAtzc5fndAANJGFzSW5zdGFuY2VPZnNxAH4AC/hsWtt0AApleHRyYWN0SW50c3EAfgAL3Gk0rHQABmVxdWFsc3NxAH4AC/fv5yl0AAtleHRyYWN0VGV4dHNxAH4AC6T4FD50AAxhc0luc3RhbmNlT2ZzcQB+AAtOiITQdAAMc3luY2hyb25pemVkc3EAfgAL32h2DnQADSRpc0luc3RhbmNlT2ZzcQB+AAuNDErrdAALbG9hZEFydGljbGVzcQB+AAvG8cYedAAEbWFpbnNxAH4ACz2cuG10ABRleHRyYWN0QWxsJGRlZmF1bHQkMnNxAH4ACzwp9bd0AAlub3RpZnlBbGxzcQB+AAtLL9NZdAAMaXNJbnN0YW5jZU9mc3EAfgALsu2NdHQAC2V4dHJhY3REYXRlc3EAfgALeFWYK3QAAj09c3EAfgALV8iYknQABWNsb25lc3EAfgALldW0p3QACmV4dHJhY3RBbGxzcQB+AAvIXzkBdAANZXh0cmFjdFN0cmluZ3NxAH4AC6XQcS50AAh0b1N0cmluZ3NxAH4AC+/cz290AAV3MnZlY3NxAH4AC/SBSZF0AAIhPXNxAH4ACwWMthd0AAhnZXRDbGFzc3NxAH4ACxmaY7p0AAJuZXNxAH4AC/xLe4t0AAJlcXNxAH4AC9BWTpV0AAIjI3NxAH4AC3HRzyZ0AAhmaW5hbGl6ZXNxAH4AC+TqV/Z0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgAMeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cABxAH4AOXVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AaHNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBRTAAJaW5oZXJpdGVkcQB+AFFMAAdwYXJlbnRzcQB+AFF4cQB+AG1zcQB+AGh1cQB+AEwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AFJxAH4AW3VxAH4AXAAAAABzcQB+AF4AcQB+ACV1cQB+AGAAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AbHQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AGxzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AIh1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADEwAA3RwZXEAfgB1eHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBjdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgB8WwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBsc3EAfgB7dAAFQXJyYXlxAH4AgXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgB7dAAGU3RyaW5nc3EAfgB/c3EAfgCCdXEAfgCFAAAAA3NxAH4Ah3QABGphdmFzcQB+AId0AARsYW5ncQB+AIxzcQB+AGh1cQB+AEwAAAAAc3EAfgBodXEAfgCgAAAAAnNxAH4Ae3QABk9iamVjdHEAfgCkc3EAfgB7dAADQW55cQB+AIF1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWlxDrK91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AAxMAA9zb3VyY2VEaXJlY3RvcnlxAH4ADHhwdAArL2hvbWUvZW1lcmljL255c2svdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFDH7LfvDhjE9LfzwQSRQ3d8/e6uL
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwR30szAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAFzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHAvdfyzdAAHb3JkZXJlZHVxAH4ACQAAABxzcQB+AAv/iFdZdAAGbm90aWZ5c3EAfgALf3MYynQABHdhaXRzcQB+AAtzc5fndAANJGFzSW5zdGFuY2VPZnNxAH4AC/hsWtt0AApleHRyYWN0SW50c3EAfgAL3Gk0rHQABmVxdWFsc3NxAH4AC/fv5yl0AAtleHRyYWN0VGV4dHNxAH4AC6T4FD50AAxhc0luc3RhbmNlT2ZzcQB+AAtOiITQdAAMc3luY2hyb25pemVkc3EAfgAL32h2DnQADSRpc0luc3RhbmNlT2ZzcQB+AAuNDErrdAALbG9hZEFydGljbGVzcQB+AAvG8cYedAAEbWFpbnNxAH4ACz2cuG10ABRleHRyYWN0QWxsJGRlZmF1bHQkMnNxAH4ACzwp9bd0AAlub3RpZnlBbGxzcQB+AAtLL9NZdAAMaXNJbnN0YW5jZU9mc3EAfgALsu2NdHQAC2V4dHJhY3REYXRlc3EAfgALeFWYK3QAAj09c3EAfgALV8iYknQABWNsb25lc3EAfgALldW0p3QACmV4dHJhY3RBbGxzcQB+AAvIXzkBdAANZXh0cmFjdFN0cmluZ3NxAH4AC6XQcS50AAh0b1N0cmluZ3NxAH4AC+/cz290AAV3MnZlY3NxAH4AC/SBSZF0AAIhPXNxAH4ACwWMthd0AAhnZXRDbGFzc3NxAH4ACxmaY7p0AAJuZXNxAH4AC/xLe4t0AAJlcXNxAH4AC9BWTpV0AAIjI3NxAH4AC3HRzyZ0AAhmaW5hbGl6ZXNxAH4AC+TqV/Z0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgAMeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cABxAH4AOXVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AaHNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBRTAAJaW5oZXJpdGVkcQB+AFFMAAdwYXJlbnRzcQB+AFF4cQB+AG1zcQB+AGh1cQB+AEwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AFJxAH4AW3VxAH4AXAAAAABzcQB+AF4AcQB+ACV1cQB+AGAAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AbHQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AGxzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AIh1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADEwAA3RwZXEAfgB1eHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBjdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgB8WwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBsc3EAfgB7dAAFQXJyYXlxAH4AgXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgB7dAAGU3RyaW5nc3EAfgB/c3EAfgCCdXEAfgCFAAAAA3NxAH4Ah3QABGphdmFzcQB+AId0AARsYW5ncQB+AIxzcQB+AGh1cQB+AEwAAAAAc3EAfgBodXEAfgCgAAAAAnNxAH4Ae3QABk9iamVjdHEAfgCkc3EAfgB7dAADQW55cQB+AIF1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmCHSv91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AAxMAA9zb3VyY2VEaXJlY3RvcnlxAH4ADHhwdAArL2hvbWUvZW1lcmljL255c2svdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFDzQrJsv0yH35Rbn5tc9g6T5Pvnd
 external apis:
 0 items
 source infos:
 2 items
 /home/emeric/nysk/src/main/scala/NYSK.scala -> 
-AAAAAAAAAAEAAAEAAADLACMgICAgICAgICAgICAgICAgICAgICAgIHdlaWdodCA9IDEuOwEAACEEAQAAACABACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEAKy9ob21lL2VtZXJpYy9ueXNrL3NyYy9tYWluL3NjYWxhL05ZU0suc2NhbGEBACsvaG9tZS9lbWVyaWMvbnlzay9zcmMvbWFpbi9zY2FsYS9OWVNLLnNjYWxhAI1UaGlzIGxleGljYWwgc3ludGF4IGlzIGRlcHJlY2F0ZWQuICBGcm9tIHNjYWxhIDIuMTEsIGEgZG90IHdpbGwgb25seSBiZSBjb25zaWRlcmVkIHBhcnQgb2YgYSBudW1iZXIgaWYgaXQgaXMgaW1tZWRpYXRlbHkgZm9sbG93ZWQgYnkgYSBkaWdpdC4B
+AAAAAAAAAAEAAAEAAADLACMgICAgICAgICAgICAgICAgICAgICAgIHdlaWdodCA9IDEuOwEAACFyAQAAACABACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAEAKy9ob21lL2VtZXJpYy9ueXNrL3NyYy9tYWluL3NjYWxhL05ZU0suc2NhbGEBACsvaG9tZS9lbWVyaWMvbnlzay9zcmMvbWFpbi9zY2FsYS9OWVNLLnNjYWxhAI1UaGlzIGxleGljYWwgc3ludGF4IGlzIGRlcHJlY2F0ZWQuICBGcm9tIHNjYWxhIDIuMTEsIGEgZG90IHdpbGwgb25seSBiZSBjb25zaWRlcmVkIHBhcnQgb2YgYSBudW1iZXIgaWYgaXQgaXMgaW1tZWRpYXRlbHkgZm9sbG93ZWQgYnkgYSBkaWdpdC4B
 /home/emeric/nysk/src/main/scala/w2vec.scala -> 
 AAAAAAAAAAA=
 compilations:
-1 items
+6 items
 0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWlxDrK91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmAnY1N1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmApych1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+3 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmAwg+x1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+4 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmAyQSN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+5 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmCHSv91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAKy9ob21lL2VtZXJpYy9ueXNrL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
