@@ -5,6 +5,7 @@ enwik?
 metastore_db/
 w2vModel*/
 classes.txt/
+*.txt/
 clusters/
 output.txt/
 projection*/

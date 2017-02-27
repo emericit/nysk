@@ -1,0 +1,25 @@
+*****
+Extracting text
+No w2vec
+*****
+Number of terms: 1000
+*****
+apartment,bail,sinclair,building,million,manhattan,release,court,guard,judge,
+*****
+maintain,site,media,incident,rate,michael,eye,widely,secretary,sunday,
+*****
+percent,stock,market,index,price,trading,datum,fall,higher,investor,
+*****
+reuter,product,news,comment,professional,mobile,index,com,capital,review,
+*****
+lagarde,european,minister,finance,candidate,europe,bank,economy,imf,emerge,
+*****
+journal,opinion,obama,geithner,scandal,politics,limit,tax,age,previous,
+*****
+request,information,incident,rate,michael,eye,widely,secretary,sunday,launch,
+*****
+woman,obama,man,dsk,sarkozy,know,people,president,socialist,france,
+*****
+shapiro,dna,lawyer,room,brafman,hotel,evidence,maid,sofitel,bail,
+*****
+comment,email,com,news,article,search,twitter,facebook,business,subscribe,
