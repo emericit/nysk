@@ -30,6 +30,9 @@ import edu.stanford.nlp.process.PTBTokenizer;
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
 
+import org.apache.spark.mllib.clustering.{ KMeans, KMeansModel }
+import org.apache.spark.mllib.util.KMeansDataGenerator
+
 object NYSK {
 
   def toBreeze(v:Vector) = BVector(v.toArray)
@@ -102,6 +105,18 @@ object NYSK {
   implicit def ordered: Ordering[java.sql.Timestamp] = new Ordering[java.sql.Timestamp] {
     def compare(x: java.sql.Timestamp, y: java.sql.Timestamp): Int = x compareTo y
   }
+  
+  def hasLetters(str: String): Boolean = {
+    // While loop for high performance
+    var i = 0
+    while (i < str.length) {
+      if (Character.isLetter(str.charAt(i))) {
+        return true
+      }
+      i += 1
+    }
+    false
+  }
 
   def main(args: Array[String]) {
     var textToExtract = "text";
@@ -141,6 +156,8 @@ object NYSK {
     //val nysk_texts: RDD[String] = nysk_xml.map(extractText)
     /*println(nysk_texts.count())*/
     val nysk: RDD[(Int, java.sql.Timestamp, String)] = nysk_xml.map(e => extractAll(e,textToExtract))
+    val nyskTitles: RDD[(Int, java.sql.Timestamp, String)] = nysk_xml.map(e => extractAll(e,"title"))
+    val nyskSummaries: RDD[(Int, java.sql.Timestamp, String)] = nysk_xml.map(e => extractAll(e,"summary"))
 
     val stopwords = sc.textFile("hdfs://head.local:9000/user/emeric/stopwords.txt").collect.toArray.toSet
     val stopwordsBroadcast = sc.broadcast(stopwords).value
@@ -159,40 +176,51 @@ object NYSK {
     // transmettre la map aux noeuds de calcul
     val bVectors2 = sc.broadcast(vectors2)
 
-    // mapPartitions pour ne pas initialiser le NLPPIpeline 1 fois par élément du RDD
-    // mais une fois par noeud de calcul
-    val lemmatized = nysk.mapPartitions(iter => {
-      val pipeline = com.cloudera.datascience.lsa.ParseWikipedia.createNLPPipeline();
-      iter.map {
-        case (docid, date, text) =>
-          (docid.toString,
-            com.cloudera.datascience.lsa.ParseWikipedia.plainTextToLemmas(text.toLowerCase.split("\\W+").mkString(" "), stopwordsBroadcast, pipeline))
-      };
-    })
-
-    val numTerms = 1000;
-    val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, numTerms, sc);
-    termDocMatrix.cache();
-
     if (! useW2Vec) {
+      // mapPartitions pour ne pas initialiser le NLPPIpeline 1 fois par élément du RDD
+      // mais une fois par noeud de calcul
+      val lemmatized = nysk.mapPartitions(iter => {
+          val pipeline = com.cloudera.datascience.lsa.ParseWikipedia.createNLPPipeline();
+          iter.map {
+            case (docid, date, text) =>
+              (docid.toString,
+                com.cloudera.datascience.lsa.ParseWikipedia.plainTextToLemmas(text.toLowerCase.split("\\W+").mkString(" "), stopwordsBroadcast, pipeline))
+            };
+        })
+
+        val numTerms = 1000;
+        val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, stopwordsBroadcast, numTerms, sc);
+        termDocMatrix.cache();
         val mat = new RowMatrix(termDocMatrix)
-        val k = 10 // nombre de valeurs singuliers à garder
+        val k = 10 // nombre de valeurs singulières à garder
         val svd = mat.computeSVD(k, computeU=true)
         val projections = mat.multiply(svd.V)
         val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
         // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-        val outputProjection = "hdfs://head.local:9000/user/emeric/projection.txt"
+        val outputProjection = "hdfs://head.local:9000/user/emeric/projection_LSA.txt"
         try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
         catch { case _ : Throwable => { } }
         projectionsTxt.saveAsTextFile(outputProjection)
     }
     else {
+        val lemmatizedWithDate = nysk.mapPartitions(iter => {
+          val pipeline = com.cloudera.datascience.lsa.ParseWikipedia.createNLPPipeline();
+          iter.map {
+            case (docid, date, text) =>
+              (docid.toString, date,
+                com.cloudera.datascience.lsa.ParseWikipedia.plainTextToLemmas(text.toLowerCase.split("\\W+").mkString(" "), stopwordsBroadcast, pipeline))
+            };
+        })
+        val lemmatized = lemmatizedWithDate.map { case (docid, date, text) => (docid, text) }
+        val numTerms = 1000;
+        val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, stopwordsBroadcast, numTerms, sc);
+        termDocMatrix.cache();
         val idTerms = termIds.map(_.swap)
 
         val pairs = termDocMatrix.zip(lemmatized);
 
         var w2vecRepr = pairs.map({ case (row, (docid, lemmas)) => 
-          var vSum = Vectors.zeros(10)
+          var vSum = Vectors.zeros(100)
           var totalWeight: Double = 0
           val words = lemmas.toSet
           words.foreach { word =>
@@ -216,12 +244,12 @@ object NYSK {
                vSum = Vectors.zeros(100);
           }
           (docid, vSum)
-        }).filter(vec => Vectors.norm(vec._2, 1.0) > 0.0).persist() 
+        })/*.filter(vec => Vectors.norm(vec._2, 1.0) > 0.0)*/.persist() 
         val matRDD = w2vecRepr.map{v => v._2}.cache()
         val mat = new RowMatrix(matRDD)
         val matrixTxt = mat.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
         // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-        val outputMatrix = "hdfs://head.local:9000/user/emeric/matrice.txt"
+        val outputMatrix = "hdfs://head.local:9000/user/emeric/matrice_W2V.txt"
         try { hdfs.delete(new org.apache.hadoop.fs.Path(outputMatrix), true) } 
         catch { case _ : Throwable => { } }
         matrixTxt.saveAsTextFile(outputMatrix)
@@ -234,10 +262,53 @@ object NYSK {
         val matSummary = projections.computeColumnSummaryStatistics()
         val projectionsTxt = projections.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
         // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
-        val outputProjection = "hdfs://head.local:9000/user/emeric/projection.txt"
+        val outputProjection = "hdfs://head.local:9000/user/emeric/projection_W2V.txt"
         try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjection), true) } 
         catch { case _ : Throwable => { } }
         projectionsTxt.saveAsTextFile(outputProjection)
+        
+        val nbClusters = 4
+        val nbIterations = 1000
+        val runs = 10
+        val clustering = KMeans.train(matRDD, nbClusters, nbIterations, runs, "k-means||", 0)
+        /*val outputClustering = "hdfs://head.local:9000/user/emeric/clusters"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputClustering), true) } 
+        catch { case _ : Throwable => { } }
+        clustering.save(sc, outputClustering)*/
+        
+        val classes = clustering.predict(matRDD)
+        val outputClasses = "hdfs://head.local:9000/user/emeric/classes_W2V.txt"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputClasses), true) } 
+        catch { case _ : Throwable => { } }
+        classes.saveAsTextFile(outputClasses)
+        
+        val outputData = lemmatizedWithDate.zip(classes).map { case ((docid, date, title),cl) => (docid, date, cl) }.sortBy(_._2).map(l => l.toString.filter(c => c != '(' & c != ')'))
+        val outputDataFile = "hdfs://head.local:9000/user/emeric/output_W2V.txt"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputDataFile), true) } 
+        catch { case _ : Throwable => { } }
+        outputData.saveAsTextFile(outputDataFile)
+        
+       clustering.clusterCenters.foreach(clusterCenter => {
+            val nearest = w2vecRepr.map{v => (v._1, Vectors.sqdist(v._2,clusterCenter))}.sortBy(_._2).map{ case (id, dist) => id }.take(10).toSet
+            println("*****")
+            pairs.filter{ case (row, (docid, lemmas)) => nearest contains docid }.foreach {  case (row, (docid, lemmas)) => {
+                val id = row.toArray.zipWithIndex.sortBy(- _._1).take(5).map(_._2)
+                id.foreach { s => print( termIds(s) + "," ) }
+                println ()
+                }
+            }
+        }
+       )
+        
+        val factors = sc.textFile("hdfs://head.local:9000/user/emeric/factors.txt")
+        val matP = Matrices.dense(numRows=100, numCols=4, values=factors.map(line => line.split(" ").map(w => w.toDouble)).collect.flatten)
+        val projectionsP = mat.multiply(matP)
+        val projectionsPTxt = projectionsP.rows.map(l => l.toString.filter(c => c != '[' & c != ']'))
+        // Delete the existing path, ignore any exceptions thrown if the path doesn't exist
+        val outputProjectionP = "hdfs://head.local:9000/user/emeric/projectionP.txt"
+        try { hdfs.delete(new org.apache.hadoop.fs.Path(outputProjectionP), true) } 
+        catch { case _ : Throwable => { } }
+        projectionsPTxt.saveAsTextFile(outputProjectionP)
     }
     /*val numTerms = 1000;
     val (termDocMatrix, termIds, docIds, idfs) = com.cloudera.datascience.lsa.ParseWikipedia.termDocumentMatrix(lemmatized, /*stopwordsBroadcast,*/ numTerms, sc);

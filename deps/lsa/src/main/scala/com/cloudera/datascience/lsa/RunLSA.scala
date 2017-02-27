@@ -65,7 +65,7 @@ object RunLSA {
 
     val filtered = lemmatized.filter(_._2.size > 1)
 
-    termDocumentMatrix(filtered, /*stopWords,*/ numTerms, sc)
+    termDocumentMatrix(filtered, stopWords, numTerms, sc)
   }
 
   def topTermsInTopConcepts(svd: SingularValueDecomposition[RowMatrix, Matrix], numConcepts: Int,

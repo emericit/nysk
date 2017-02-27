@@ -35,10 +35,10 @@ object ParseWikipedia {
    * Returns a term-document matrix where each element is the TF-IDF of the row's document and
    * the column's term.
    */
-  def termDocumentMatrix(docs: RDD[(String, Seq[String])], /*stopWords: Set[String],*/ numTerms: Int,
+  def termDocumentMatrix(docs: RDD[(String, Seq[String])], stopWords: Set[String], numTerms: Int,
       sc: SparkContext): (RDD[Vector], Map[Int, String], Map[Long, String], Map[String, Double]) = {
     val docTermFreqs = docs.mapValues(terms => {
-      val termFreqsInDoc = terms.foldLeft(new HashMap[String, Int]()) {
+      val termFreqsInDoc = terms.filter( lemma => ! (stopWords contains lemma)).foldLeft(new HashMap[String, Int]()) {
         (map, term) => map += term -> (map.getOrElse(term, 0) + 1)
       }
       termFreqsInDoc

@@ -3,6 +3,11 @@
 text?
 enwik?
 metastore_db/
+w2vModel*/
+classes.txt/
+clusters/
+output.txt/
+projection*/
 *.jar
 *.class
 *.cache

@@ -85,7 +85,7 @@ object w2vec {
     val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://head.local:9000"), hadoopConf)
     val nysk_raw = loadArticle(sc, "hdfs://head.local:9000/user/emeric/nysk.xml")/*.sample(false,0.01)*/
     val nysk_xml: RDD[Elem] = nysk_raw.map(XML.loadString)
-    val nysk: RDD[Seq[String]] = nysk_xml.map(e => extractText(e).split(" ").toSeq)
+    val nysk: RDD[Seq[String]] = nysk_xml.map(e => extractText(e).toLowerCase.split("\\W+").toSeq)
 
     val input = sc.textFile("text8").map(line => line.split(" ").toSeq)
 
